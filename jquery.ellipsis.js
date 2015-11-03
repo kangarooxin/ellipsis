@@ -19,7 +19,9 @@
                     if (charCode > 127 || charCode == 94) {
                         str_length++;
                     }
-                    str_cut = str_cut + otext.charAt(i);
+                    if(str_length <= maxlen) {
+                        str_cut = str_cut + otext.charAt(i);
+                    }
                     if (str_length >= maxlen && i < otext.length - 1) {
                         str_cut = str_cut + options.end_text;
                         $(this).text(str_cut);
