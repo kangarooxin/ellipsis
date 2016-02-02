@@ -3,7 +3,7 @@
         if($.isNumeric(options)) {
             options = {def_len : options};
         }
-        options = $.extend($.fn.ellipsis.defaults, options);
+        options = $.extend({}, $.fn.ellipsis.defaults, options);
         return this.each(function() {
             var maxlen = $(this).attr(options.len_attr) || options.def_len;
             var otext = $.trim($(this).text());
